@@ -39,4 +39,5 @@ dismiss.addEventListener("click", () => {
 bg.addEventListener("click", () => {
   valid.classList.remove("popup");
   bg.classList.remove("bg");
+  article.classList.remove("invisible");
 });

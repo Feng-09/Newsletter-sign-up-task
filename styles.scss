@@ -262,7 +262,6 @@ input.fail {
   .image2 {
     display: inline;
     width: 100%;
-    margin-top: 2rem;
   }
 
   .image {
@@ -313,6 +312,10 @@ input.fail {
   }
 
   article.invisible {
+    display: none;
+  }
+
+  #main {
     display: none;
   }
 }
