@@ -5,7 +5,7 @@ let input = document.getElementById("mail");
 let valid = document.getElementById("popUp");
 let bg = document.getElementById("main");
 let dismiss = document.getElementById("dismissBtn");
-let article = document.getElementById("submain");
+let main = document.getElementById("body");
 let invalid = document.getElementById("invalid");
 
 btn.addEventListener("click", () => {
@@ -17,7 +17,7 @@ btn.addEventListener("click", () => {
   if (validation1 === true) {
     valid.classList.add("popup");
     bg.classList.add("bg");
-    article.classList.add("invisible");
+    main.classList.add("invisible");
   } else {
     invalid.innerHTML = "Valid email required";
     input.classList.add("fail");
@@ -33,11 +33,11 @@ input.addEventListener("focus", () => {
 dismiss.addEventListener("click", () => {
   valid.classList.remove("popup");
   bg.classList.remove("bg");
-  article.classList.remove("invisible");
+  main.classList.remove("invisible");
 });
 
 bg.addEventListener("click", () => {
   valid.classList.remove("popup");
   bg.classList.remove("bg");
-  article.classList.remove("invisible");
+  main.classList.remove("invisible");
 });
