@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: robotReg;
+}
+
+@font-face {
+  font-family: robotoReg;
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: robotoBold;
+  src: url(assets/fonts/Roboto-Bold.ttf);
+}
+/* colors */
+/* font */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(235, 18%, 26%);
+}
+
+.main {
+  width: 53rem;
+  height: 35rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 30rem;
+  padding: 3rem;
+}
+
+h1 {
+  color: hsl(234, 29%, 20%);
+  font-family: robotoBold;
+  font-size: 3.5rem;
+}
+
+p {
+  color: hsl(235, 18%, 26%);
+  font-family: robotoReg;
+}
+
+p.email {
+  color: hsl(235, 18%, 26%);
+  font-family: robotoBold;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+p#invalid {
+  float: right;
+  display: inline;
+  color: hsl(322, 81%, 43%);
+  font-size: small;
+}
+
+p.vibrate {
+  transform: translate(0px);
+  animation: myAnim;
+  animation-duration: 0.1s;
+}
+
+@keyframes myAnim {
+  0% {
+    transform: translate(0px);
+  }
+  20% {
+    transform: translate(10px);
+  }
+  50% {
+    transform: translate(-10px);
+  }
+  80% {
+    transform: translate(10px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+.list {
+  height: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.listItem {
+  display: flex;
+}
+
+.listItem img {
+  margin-right: 0.8rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  color: hsl(235, 18%, 26%);
+  font-family: robotoReg;
+  font-size: medium;
+  border-radius: 0.4rem;
+}
+
+input:hover {
+  cursor: pointer;
+  border: 1px solid hsl(235, 18%, 26%);
+  border-radius: 0.4rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-family: robotoBold;
+  border-radius: 0.4rem;
+  border: hsl(234, 29%, 20%);
+}
+
+button:hover {
+  background-image: linear-gradient(to right, hsl(322, 81%, 43%), hsl(4, 100%, 67%));
+  cursor: pointer;
+}
+
+.image2 {
+  display: none;
+}
+
+footer,
+a {
+  font-family: robotoReg;
+  text-decoration: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+.successMain {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  margin: 0 auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 12rem;
+  width: 12rem;
+  padding: 1.2rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  font-size: 7px;
+}
+
+.successImg {
+  width: 1.5rem;
+}
+
+.successHead {
+  font-size: 1.2rem;
+}
+
+.successMsg {
+  margin-bottom: 0.8rem;
+}
+
+#iMail {
+  font-family: robotoReg;
+}
+
+.dismissBtn {
+  font-size: 8px;
+  height: 1.4rem;
+  border-radius: 0.2rem;
+}
+
+input.fail {
+  border: 1px solid hsl(322, 81%, 43%);
+}
+
+.popup {
+  transform: scale(2, 2);
+  transition: 0.1s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+#main {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0.5;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(235, 18%, 26%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bg#main {
+  opacity: 1;
+  transition: 0.1s;
+  pointer-events: all;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    background-color: hsl(0, 0%, 100%);
+  }
+  .main {
+    width: 100%;
+    height: auto;
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+  .image2 {
+    display: inline;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .image {
+    display: none;
+  }
+  article {
+    width: 100%;
+    height: 30rem;
+    padding: 1.5rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .list {
+    height: 30%;
+    margin-bottom: 1rem;
+  }
+  input {
+    margin-bottom: 0.5rem;
+  }
+  footer {
+    position: static;
+  }
+  .successMain {
+    height: 50%;
+    width: 50%;
+    border-radius: 0;
+    padding-top: 18%;
+    padding-left: 1rem;
+  }
+  .successImg {
+    width: 2rem;
+  }
+  .successMsg {
+    margin-bottom: 7rem;
+  }
+  .dismissBtn {
+    height: 1.5rem;
+  }
+  article.invisible {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
