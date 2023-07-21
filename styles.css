@@ -242,7 +242,6 @@ input.fail {
   .image2 {
     display: inline;
     width: 100%;
-    margin-top: 2rem;
   }
   .image {
     display: none;
@@ -282,6 +281,9 @@ input.fail {
     height: 1.5rem;
   }
   article.invisible {
+    display: none;
+  }
+  #main {
     display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
